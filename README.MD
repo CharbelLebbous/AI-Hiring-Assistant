@@ -55,33 +55,24 @@ An **AI-powered HR assistant** that:
 1️⃣ **Install dependencies**
 ```bash
 pip install -r requirements.txt
+
 2️⃣ Set your API key
-
 Add a .env file in your project root:
-
-ini
-Copy code
 COHERE_API_KEY=your_cohere_api_key_here
+
 3️⃣ Add your candidate resumes
-
 Place all candidate files under:
-
-bash
-Copy code
 data/resumes/
 Supports .pdf, .docx, .doc, and .txt.
 
 4️⃣ Run the app
-
-bash
-Copy code
 streamlit run app.py
+
 5️⃣ Open in your browser:
 http://localhost:8501
 
 📂 Project Structure
-pgsql
-Copy code
+
 .
 ├── app.py              # Streamlit UI (chat + indexing)
 ├── query_engine.py     # Conversational assistant logic
@@ -93,6 +84,7 @@ Copy code
 ├── requirements.txt    # Dependencies
 ├── .gitignore
 └── data/resumes/       # Candidate resumes folder
+
 ✅ Example Use Cases
 Q: Who has experience in NLP?
 A: Charbel Lebbous has experience in NLP with tools like spaCy, NLTK, and BERT.
@@ -109,12 +101,12 @@ Each answer includes:
 Charbel Lebbous CV.pdf
 
 🧠 Internal Flow
-pgsql
-Copy code
+
 Resumes Folder ──▶ Ingestion (text + metadata)
                  ├─▶ Embedding (Cohere)
                  ├─▶ FAISS Vector Index
 User Question ──▶ Cohere Query Engine ──▶ Answer + Sources
+
 🧰 Tech Stack
 Python 3.10+
 
@@ -132,11 +124,9 @@ OCR Stack: PyMuPDF + pdf2image + pytesseract
 🗑️ Delete Storage: Use “🗑️ Delete Stored Index & Metadata” to reset your database.
 
 Storage files are located in:
-
-pgsql
-Copy code
 ./storage/faiss.index
 ./storage/metadata.json
+
 🧩 Possible Future Upgrades
 ⏫ Export candidate lists to CSV/Excel
 
