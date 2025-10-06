@@ -1,0 +1,35 @@
+# =============================
+# 📦 AI Hiring Assistant — Requirements
+# =============================
+
+# --- Cohere SDK ---
+# Used for embeddings, chat, and language understanding
+cohere>=5.0.0
+
+# --- Vector Store ---
+# Facebook’s FAISS library for similarity search between embeddings
+faiss-cpu
+
+# --- OCR & Document Parsing ---
+# pytesseract: Optical Character Recognition (for scanned PDFs)
+pytesseract
+# pdf2image: Converts PDF pages to images for OCR fallback
+pdf2image
+# PyMuPDF (fitz): Extracts native text from PDFs
+PyMuPDF
+# docx2txt: Extracts text from Word (.docx) files
+docx2txt
+# python-docx: Handles additional Word document formats (.doc)
+python-docx
+
+# --- Web Application Framework ---
+# Streamlit for building the interactive HR assistant interface
+streamlit
+
+# --- Configuration Management ---
+# For loading environment variables from .env (API keys, paths, etc.)
+python-dotenv
+
+# --- Math & Array Operations ---
+# NumPy for vector normalization, storage, and FAISS operations
+numpy
