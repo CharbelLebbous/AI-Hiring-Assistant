@@ -5,13 +5,6 @@ storage/
 *.pyc
 .env
 .DS_Store
-
 *.py[cod]
-
-
-
 .vscode/
-
-
-
 Thumbs.db
